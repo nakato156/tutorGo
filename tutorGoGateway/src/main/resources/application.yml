@@ -5,9 +5,10 @@ spring:
     gateway:
       routes:
         - id: student-service
-          uri: lb://student-service
+          uri: lb://STUDENT-SERVICE
           predicates:
             - Path=/api/student/**
+        
         - id: tutor-service
           uri: lb://tutor-service
           predicates:
